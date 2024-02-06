@@ -1,1 +1,6 @@
-<p>listprojects works!</p>
+<div *ngFor="let p of projects">
+id : {{p.id}}
+title : {{p.title}}
+description : {{p.description}}
+<input type="submit" value="Add Task">
+</div>
