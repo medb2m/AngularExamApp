@@ -8,13 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ListtasksComponent } from './listtasks/listtasks.component';
 import { ListprojectsComponent } from './listprojects/listprojects.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ListtasksComponent,
-    ListprojectsComponent
+    ListprojectsComponent,
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
