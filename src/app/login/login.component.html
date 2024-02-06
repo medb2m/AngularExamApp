@@ -1,1 +1,23 @@
-<p>login works!</p>
+<form [formGroup]="fg">
+    <label>username</label>
+    <input type="text" formControlName="username">
+    <div *ngIf="fg.get('username')?.invalid">
+        <div *ngIf="fg.get('username')?.errors?.['required']">
+            Username is required
+        </div>
+        <div *ngIf="fg.get('username')?.errors?.['minlength']">
+            Username should be greater than 3 
+        </div>
+    </div>
+    <label>password</label>
+    <input type="text" formControlName="password">
+    <div *ngIf="fg.get('password')?.invalid">
+        <div *ngIf="fg.get('password')?.errors?.['required']">
+            password is required
+        </div>
+        <div *ngIf="fg.get('password')?.errors?.['pattern']">
+            password should be greater than 6 and begins with an Uppercase
+        </div>
+    </div>
+    <input type="submit" value="login" [disabled]="fg.invalid" (click)="checkCredentials()">
+</form>
