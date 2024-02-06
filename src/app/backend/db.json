@@ -1,6 +1,15 @@
 {
     "user" : [
         {"id" : 1, "username" : "John Doe", "password" : "mistery" },
-        {"id" : 1, "username" : "admin 2", "password" : "mistery" }
+        {"id" : 2, "username" : "admin 2", "password" : "mistery" }
+    ],
+    "task" : [
+        {"id" : 1, "title" : "task 1", "dateD" : "12/01/2022", "dateF" : "12/01/2023", "status" : "true" , "project" : {
+            "id":1, "title" : "Project 1", "description" : "this is Project One", "tasks" : [], "users" : []
+        }}
+    ],
+    "project" : [
+        {"id":1, "title" : "Project 1", "description" : "this is Project One", "tasks" : [], "users" : []},
+        {"id":2, "title" : "Project 2", "description" : "this is Project Two", "tasks" : [], "users" : []}
     ]
 }
